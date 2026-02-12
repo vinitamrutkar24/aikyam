@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Shipment | Aikyam Console</title>
+    <meta name="description"
+        content="Track your shipment in real-time with Aikyam Console. Enter your tracking number for instant updates.">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h3>Real-Time Tracking</h3>
+            <h1>Track Your Shipment</h1>
+        </div>
+    </section>
+
+    <!-- Track & Trace Section -->
+    <section class="section">
+        <div class="container">
+            <div class="track-container animate-on-scroll">
+                <div class="track-intro">
+                    <h2>Enter Your Tracking Details</h2>
+                    <p>Track your shipment in real-time. Enter your tracking number, container number, or bill of lading
+                        number below.</p>
+                </div>
+
+                <div class="track-form-box">
+                    <form class="track-form" id="trackingForm">
+                        <div class="form-group">
+                            <label for="trackingNumber">Tracking Number / Container Number / B/L Number</label>
+                            <input type="text" id="trackingNumber" name="trackingNumber"
+                                placeholder="e.g., TCNU1234567 or APXC2024001" required>
+                        </div>
+                        <button type="submit" class="btn-premium">
+                            <i class="fas fa-search"></i> Track Shipment
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tracking Result (Hidden by default) -->
+                <div class="tracking-result" id="trackingResult" style="display: none;">
+                    <div class="result-header">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Shipment Status</h3>
+                    </div>
+                    <div class="result-info">
+                        <div class="info-row">
+                            <span class="info-label">Tracking Number:</span>
+                            <span class="info-value" id="resultTrackingNumber">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Current Status:</span>
+                            <span class="info-value status-badge" id="resultStatus">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Origin:</span>
+                            <span class="info-value" id="resultOrigin">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Destination:</span>
+                            <span class="info-value" id="resultDestination">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Estimated Delivery:</span>
+                            <span class="info-value" id="resultETA">-</span>
+                        </div>
+                    </div>
+                    <div class="tracking-timeline">
+                        <h4>Shipment Journey</h4>
+                        <div class="timeline" id="timeline">
+                            <!-- Timeline items will be inserted here -->
+                        </div>
+                    </div>
+                    <div class="result-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>For detailed information or assistance, please contact our customer service at <a
+                                href="mailto:cs@aikyam.com">cs@aikyam.com</a> or call +918010355235</p>
+                    </div>
+                </div>
+
+                <!-- Help Section -->
+                <div class="track-help">
+                    <h3>Need Help?</h3>
+                    <div class="help-grid">
+                        <div class="help-item">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Where to find tracking number?</h4>
+                            <p>Your tracking number is provided in your booking confirmation email or shipping
+                                documents.</p>
+                        </div>
+                        <div class="help-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <h4>Contact Support</h4>
+                            <p>Call us at +918010355235 or email <a href="mailto:cs@aikyam.com">cs@aikyam.com</a></p>
+                        </div>
+                        <div class="help-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Tracking Updates</h4>
+                            <p>Tracking information is updated every 4-6 hours. For urgent queries, please contact us
+                                directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="assets/js/ui-components.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/tracking.js" defer></script>
+</body>
+
+</html>
